@@ -1,0 +1,7 @@
+.venv
+logs
+tests
+config.yaml
+.env
+api
+__pycache__

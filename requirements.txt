@@ -1,0 +1,17 @@
+openai
+faiss-cpu
+pypdf
+docx2txt
+python-dotenv
+pyyaml
+fastapi
+uvicorn
+tiktoken
+langchain-core
+langchain-community
+langchain-huggingface
+sentence-transformers
+langchain-groq
+python-multipart
+requests
+streamlit
