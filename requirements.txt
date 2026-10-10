@@ -14,4 +14,5 @@ sentence-transformers
 langchain-groq
 python-multipart
 requests
+beautifulsoup4
 streamlit

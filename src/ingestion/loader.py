@@ -8,7 +8,15 @@ from langchain_core.documents import Document
 
 
 def load_web_page(url: str) -> list[Document]:
-    from langchain_community.document_loaders import AsyncHtmlLoader
+    try:
+        from langchain_community.document_loaders import AsyncHtmlLoader
+    except ModuleNotFoundError as error:
+        if error.name in {"bs4", "beautifulsoup4"}:
+            raise RuntimeError(
+                "Web-page support requires beautifulsoup4. Install it with "
+                "`uv pip install beautifulsoup4`."
+            ) from error
+        raise
 
     return AsyncHtmlLoader([url]).load()
 
